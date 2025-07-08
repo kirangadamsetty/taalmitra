@@ -1,0 +1,46 @@
+.songsInfo-background{
+  background: linear-gradient(to top, #d32f2f, #1a1a1a);
+  min-height:100dvh;
+}
+.songsInfoPage h1{
+    color:white!important;
+    font-weight:bold!important;
+}
+.songs-detail-info {
+  color: white !important;
+  font-weight: 200;
+  font-size: 14px;
+  margin-top:5px;
+ margin-bottom:0px!important;
+}
+.songs-list-container{
+   background: linear-gradient(to top, rgba(15, 23, 34, 0.4), rgba(10, 15, 28, 0.4));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 12px;
+  min-height:100%;
+}
+.song-container:hover{
+    background-color:#0a0f1c;
+    cursor:pointer;
+   
+}
+
+.song-list-title{
+    font-size:18px;
+    color:white;
+    font-weight:500;
+    margin-bottom:-3px;
+    margin-top:15px;
+    
+}
+
+
+
+
+
+
+
+
+
+

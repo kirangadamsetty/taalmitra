@@ -5,16 +5,17 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import logo from "../assets/taalmitra_logo.png"
-
+import {useNavigate} from "react-router-dom"
 
 
 function Header() {
+  const navigate = useNavigate()
   return (
 
    
-    <Navbar expand="lg" className="box-color">
+    <Navbar expand="lg" className="box-color fixed-top">
       <Container fluid>
-        <Navbar.Brand href="#"><img width= "200"  src = {logo}/></Navbar.Brand>
+        <Navbar.Brand href="#" onClick = {()=>navigate("/")}><img width= "200"  src = {logo}/></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -22,9 +23,9 @@ function Header() {
             style={{ maxHeight: '100px', margin:"auto"}}
             navbarScroll
           >
-            <Nav.Link href="#action1" className= "text-white">Home</Nav.Link>
+            {/* <Nav.Link href="#action1" className= "text-white">Home</Nav.Link>
             <Nav.Link href="#action2" className= "text-white">Link</Nav.Link>
-         
+          */}
           
           </Nav>
           <Form className="d-flex">

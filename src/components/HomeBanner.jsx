@@ -8,6 +8,7 @@ function HomeBanner({data}) {
   return (
     <div >
 <h4>{data[0].title}</h4>
+<p className  = "detail-info detail-info-head">{data[0].detailInfo}</p>
     
      <Swiper
       spaceBetween={30}
