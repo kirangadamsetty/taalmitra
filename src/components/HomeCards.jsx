@@ -1,10 +1,15 @@
 import "../styles/homeCards.css";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import {useNavigate} from "react-router-dom"
-// Import Swiper styles
+import {useContext} from "react"
+
 import 'swiper/css';
+import { SongsContext } from "../utils/SongsContext";
+
+
 function HomeCards({data}) {
-const navigate = useNavigate()
+    const { setSelectedSongs} = useContext(SongsContext)
+    const navigate = useNavigate()
   return (
     <div className = "mt-5">
 <h4>{data[0].title}</h4>
@@ -13,15 +18,14 @@ const navigate = useNavigate()
      <Swiper
       spaceBetween={30}
       slidesPerView={3}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
+     
     >
      
    
     
-      {data.slice(1).map((li, index) => (
+      {data.slice(1).map((li) => (
         <>
-        <SwiperSlide key={index} style = {{cursor:"pointer"}} onClick  ={()=>navigate("/songsInfo")} className="home-card-container">
+        <SwiperSlide key={li.id} style = {{cursor:"pointer"}} onClick  ={()=>{setSelectedSongs(li);navigate("/songsInfo")}} className="home-card-container">
          
   <img src={li.image} alt="poster" className="home-card-img" />
  
@@ -35,6 +39,7 @@ const navigate = useNavigate()
      </>
       ))}
     </Swiper>
+
     </div>
   );
 }

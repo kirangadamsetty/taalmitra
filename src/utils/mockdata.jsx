@@ -53,49 +53,65 @@ export const top50Data = [
     height: "300px", 
     detailInfo: "Enjoy the most streamed songs across languages." 
   },
+
   { 
     id: "top50Data-1", 
     image: telugu50, 
     description: "Top 50 Telugu", 
-    detailInfo: "Trending Tollywood tracks lighting up the charts." 
+    detailInfo: "Trending Tollywood tracks lighting up the charts.",
+    category: "teluguTop",
+    language: "Telugu"
   },
   { 
     id: "top50Data-2", 
     image: hindi50, 
     description: "Top 50 Hindi", 
-    detailInfo: "Bollywood's hottest hits in one place." 
+    detailInfo: "Bollywood's hottest hits in one place.",
+    category: "hindiTop",
+    language: "Hindi"
   },
   { 
     id: "top50Data-3", 
     image: tamil50, 
     description: "Top 50 Tamil", 
-    detailInfo: "Top Kollywood songs ruling playlists." 
+    detailInfo: "Top Kollywood songs ruling playlists.",
+    category: "tamilTop",
+    language: "Tamil"
   },
   { 
     id: "top50Data-4", 
     image: kannada50, 
     description: "Top 50 Kannada", 
-    detailInfo: "Vibrant Kannada beats making waves." 
+    detailInfo: "Vibrant Kannada beats making waves.",
+    category: "kannadaTop",
+    language: "Kannada"
   },
   { 
     id: "top50Data-5", 
     image: malayalam50, 
     description: "Top 50 Malayalam", 
-    detailInfo: "Fresh and evergreen Malayalam hits." 
+    detailInfo: "Fresh and evergreen Malayalam hits.",
+    category: "malayalamTop",
+    language: "Malayalam"
   },
   { 
     id: "top50Data-6", 
     image: bhojpuri50, 
     description: "Top 50 Bhojpuri", 
-    detailInfo: "High-energy Bhojpuri songs you’ll love." 
+    detailInfo: "High-energy Bhojpuri songs you’ll love.",
+    category: "bhojpuriTop",
+    language: "Bhojpuri"
   },
   { 
     id: "top50Data-7", 
     image: bengali50, 
     description: "Top 50 Bengali", 
-    detailInfo: "Top Bengali tunes you can’t miss." 
+    detailInfo: "Top Bengali tunes you can’t miss.",
+    category: "bengaliTop",
+    language: "Bengali"
   }
 ];
+
 
 
 

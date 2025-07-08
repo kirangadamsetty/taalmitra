@@ -5,10 +5,14 @@ import Sidebar from "./components/Sidebar.jsx"
 import Home from "./pages/Home.jsx";
 import SongPlayer from "./components/SongsPlayer.jsx"
 import SongsListPage from "./pages/SongsListPage.jsx"
+import {useContext} from "react"
+import { SongsContextProvider, SongsContext } from "./utils/SongsContext.jsx";
 
-function App() {
+function AppLayout() {
+  const {audioRef} = useContext(SongsContext)
   return (
     <div>
+
       <Header />    
    <div className = "d-flex overflow-hidden">
     <div>
@@ -21,11 +25,17 @@ function App() {
 
   <SongPlayer/>    
             
- 
-   
-  
+   <audio ref = {audioRef} preload="auto"></audio>
     </div>
   );
+}
+
+function App(){
+  return(
+    <SongsContextProvider>
+      <AppLayout/>
+    </SongsContextProvider>
+  )
 }
 
 export const appRouter = createBrowserRouter([

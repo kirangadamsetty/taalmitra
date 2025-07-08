@@ -13,16 +13,15 @@ function HomeBanner({data}) {
      <Swiper
       spaceBetween={30}
       slidesPerView={3}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
+   
     >
      
    
     
-      {data.slice(1).map((data, index) => (
-        <SwiperSlide key={index} style = {{cursor:"pointer"}} className="home-banner-card ">
+      {data.slice(1).map((li) => (
+        <SwiperSlide key={li.id} style = {{cursor:"pointer"}} className="home-banner-card ">
          
-  <img src={data.image} alt="poster" className="home-banner-img"/>
+  <img src={li.image} alt="poster" className="home-banner-img"/>
  
 
         
