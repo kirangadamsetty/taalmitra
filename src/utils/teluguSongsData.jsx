@@ -6,6 +6,19 @@ import pushpaSong from "../assets/telugu_top50/pushpa_telugu.mp3"
 import sitaramamSong from "../assets/telugu_top50/sitaramam_telugu.mp3"
 import uppenaSong from "../assets/telugu_top50/uppena_telugu.mp3"
 
+
+//images
+import babySongImage from "../assets/telugu_songs_images/baby_song_image.jpg"
+import bujjithalliSongImage from "../assets/telugu_songs_images/bujjithalli_song_image.jpeg"
+import chuttamalleImage from "../assets/telugu_songs_images/chuttamalle_song_image.jpg"
+import mcaSongImage from "../assets/telugu_songs_images/mca_song_image.jpg"
+import pushpaSongImage from "../assets/telugu_songs_images/pushpa_song_image.jpg"
+import sitaramamSongImage from "../assets/telugu_songs_images/sitaramam_song_image.webp"
+import uppenaSongImage from "../assets/telugu_songs_images/uppena_song_image.jpg"
+
+
+
+
 export const teluguTopSongs = [
   {
     id: "teluguTop-1",
@@ -16,7 +29,7 @@ export const teluguTopSongs = [
     artist_name: "Anand Deverakonda, Vaishnavi Chaitanya",
     music_director: "Vijai Bulganin",
     singer: "Sreerama Chandra",
-    image: "https://link-to-baby-song-image.jpg", // Replace with actual image
+    image: babySongImage, // Replace with actual image
     src: babySong
   },
   {
@@ -28,7 +41,7 @@ export const teluguTopSongs = [
     artist_name: "Naga Chaitanya, Sai Pallavi",
     music_director: "Devi Sri Prasad",
     singer: "Shreya Ghoshal, DSP",
-    image: "https://link-to-bujji-thalli-image.jpg",
+    image: bujjithalliSongImage,
     src: bujjuThalliSong
   },
   {
@@ -40,7 +53,7 @@ export const teluguTopSongs = [
     artist_name: "Nani, Sai Pallavi",
     music_director: "Devi Sri Prasad",
     singer: "Rahul Sipligunj",
-    image: "https://link-to-bongarala-juttu-image.jpg",
+    image: mcaSongImage,
     src: mcaSong
   },
   {
@@ -52,7 +65,7 @@ export const teluguTopSongs = [
     artist_name: "Jr. NTR",
     music_director: "Anirudh Ravichander",
     singer: "Anirudh Ravichander",
-    image: "https://link-to-chuttamalle-image.jpg",
+    image:chuttamalleImage,
     src: chuttamalleSong
   },
   {
@@ -64,7 +77,7 @@ export const teluguTopSongs = [
     artist_name: "Dulquer Salmaan, Mrunal Thakur",
     music_director: "Vishal Chandrashekhar",
     singer: "SPB Charan, Ramya Behara",
-    image: "https://link-to-oh-sita-image.jpg",
+    image: sitaramamSongImage,
     src: sitaramamSong
   },
   {
@@ -76,7 +89,7 @@ export const teluguTopSongs = [
     artist_name: "Vaishnav Tej, Krithi Shetty",
     music_director: "Devi Sri Prasad",
     singer: "Javed Ali",
-    image: "https://link-to-neekannu-image.jpg",
+    image: uppenaSongImage,
     src: uppenaSong
   },
   {
@@ -88,7 +101,7 @@ export const teluguTopSongs = [
     artist_name: "Allu Arjun",
     music_director: "Devi Sri Prasad",
     singer: "Nakash Aziz",
-    image: "https://link-to-pushpa-image.jpg",
+    image: pushpaSongImage,
     src: pushpaSong
   }
 ];

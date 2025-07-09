@@ -6,6 +6,20 @@ import jawanSong from "../assets/hindi_top50/jawan_hindi.mp3"
 import kalHonaSong from "../assets/hindi_top50/kal_hona_hindi.mp3"
 import laapataaSong from "../assets/hindi_top50/laapataa_ladies_hindi.mp3"
 
+
+//images
+import aashiquiSongImage from "../assets/hindi_songs_images/aashiqui_song_image.jpg"
+import batlaSongImage from "../assets/hindi_songs_images/batla_house_song.jpeg"
+import chhavaSongImage from "../assets/hindi_songs_images/chhava_song_image.jpeg"
+import dopattiSongImage from "../assets/hindi_songs_images/dopatti_song_image.jpeg"
+import jawanSongImage from "../assets/hindi_songs_images/jawan_song_image.jpg"
+import kalhonaSongImage from "../assets/hindi_songs_images/kalhona_song_image.jpg"
+import laapattaSongImage from "../assets/hindi_songs_images/laapatta_song_image.jpg"
+
+
+
+
+
 export const hindiTopSongs = [
   {
     id: "hindiTop-1",
@@ -16,7 +30,7 @@ export const hindiTopSongs = [
     artist_name: "Kriti Sanon, Kajol",
     music_director: "Ammar Rehman",
     singer: "Ammar Rehman",
-    image: "https://link-to-raanjhan-image.jpg", // Replace with actual image
+    image: dopattiSongImage, // Replace with actual image
     src: dopattiSong
   },
   {
@@ -28,7 +42,7 @@ export const hindiTopSongs = [
     artist_name: "Nora Fatehi",
     music_director: "Tanishk Bagchi",
     singer: "Neha Kakkar, Tulsi Kumar, B Praak",
-    image: "https://link-to-osakisaki-image.jpg",
+    image: batlaSongImage,
     src: batlaHouseSong
   },
   {
@@ -40,7 +54,7 @@ export const hindiTopSongs = [
     artist_name: "Vicky Kaushal",
     music_director: "Shreyas Puranik",
     singer: "Shreyas Puranik",
-    image: "https://link-to-jaane-tu-image.jpg",
+    image: chhavaSongImage,
     src: chhavaSong
   },
   {
@@ -52,7 +66,7 @@ export const hindiTopSongs = [
     artist_name: "Nitanshi Goel, Sparsh Shrivastava",
     music_director: "Ram Sampath",
     singer: "Ram Sampath",
-    image: "https://link-to-sajni-image.jpg",
+    image:laapattaSongImage,
     src: laapataaSong
   },
   {
@@ -64,7 +78,7 @@ export const hindiTopSongs = [
     artist_name: "Aditya Roy Kapur, Shraddha Kapoor",
     music_director: "Mithoon",
     singer: "Arijit Singh",
-    image: "https://link-to-tum-hi-ho-image.jpg",
+    image: aashiquiSongImage,
     src: aashiquiSong
   },
   {
@@ -76,7 +90,7 @@ export const hindiTopSongs = [
     artist_name: "Shah Rukh Khan, Nayanthara",
     music_director: "Anirudh Ravichander",
     singer: "Arijit Singh, Shilpa Rao",
-    image: "https://link-to-chaleya-image.jpg",
+    image:jawanSongImage,
     src: jawanSong
   },
   {
@@ -88,7 +102,7 @@ export const hindiTopSongs = [
     artist_name: "Shah Rukh Khan, Preity Zinta",
     music_director: "Shankar–Ehsaan–Loy",
     singer: "Sonu Nigam",
-    image: "https://link-to-kal-ho-naa-ho-image.jpg",
+    image: kalhonaSongImage,
     src: kalHonaSong
   }
 ];

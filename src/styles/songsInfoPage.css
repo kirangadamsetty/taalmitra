@@ -18,7 +18,7 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 12px;
-  min-height:100%;
+  min-height:100;
 }
 .song-container:hover{
     background-color:#0a0f1c;

@@ -7,9 +7,10 @@ import SongPlayer from "./components/SongsPlayer.jsx"
 import SongsListPage from "./pages/SongsListPage.jsx"
 import {useContext} from "react"
 import { SongsContextProvider, SongsContext } from "./utils/SongsContext.jsx";
-
+import AudioContextProvider from "./utils/AudioContext"
 function AppLayout() {
-  const {audioRef} = useContext(SongsContext)
+  const {audioRef,currentPlayingSong} = useContext(SongsContext)
+  
   return (
     <div>
 
@@ -18,12 +19,12 @@ function AppLayout() {
     <div>
 <Sidebar/>
     </div>
-    <div className="flex-grow-1" style={{marginTop:"80px",marginBottom:"60px", marginLeft: "20%"  }}>
+    <div className="flex-grow-1" style={{marginTop:"80px", marginLeft: "20%", marginBottom: currentPlayingSong? "75px" : "0px"  }}>
           <Outlet />
         </div>
    </div>
 
-  <SongPlayer/>    
+  {currentPlayingSong  && <SongPlayer/> }
             
    <audio ref = {audioRef} preload="auto"></audio>
     </div>
@@ -32,9 +33,13 @@ function AppLayout() {
 
 function App(){
   return(
+   
     <SongsContextProvider>
+     <AudioContextProvider>
       <AppLayout/>
+      </AudioContextProvider>
     </SongsContextProvider>
+   
   )
 }
 
