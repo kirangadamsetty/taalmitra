@@ -32,7 +32,7 @@ const formatTime = (time) => {
 };
 const handleSeek = (e) => {
   const rect = e.currentTarget.getBoundingClientRect(); 
-  const clickX = e.clientX - rect.left; // how far from the left was clicked
+  const clickX = e.clientX - rect.left; 
   const width = rect.width;
 
   const percent = clickX / width;
