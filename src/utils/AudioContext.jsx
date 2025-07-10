@@ -31,7 +31,7 @@ const formatTime = (time) => {
   return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
 };
 const handleSeek = (e) => {
-  const rect = e.currentTarget.getBoundingClientRect(); // get bar size and position
+  const rect = e.currentTarget.getBoundingClientRect(); 
   const clickX = e.clientX - rect.left; // how far from the left was clicked
   const width = rect.width;
 
