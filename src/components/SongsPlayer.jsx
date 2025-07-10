@@ -82,7 +82,7 @@ function SongPlayer() {
           gap: "18px"
         }}>
           <img width="20" height="20" onClick = {()=>handlePrevious(currentPlayingSong)} src={previousButton} style={{ cursor: "pointer" }} />
-         {currentPlayingSong.playing ? <img onClick = {()=>handlePause(currentPlayingSong)} src = {pauseButton} width={38} height={38}/>: <img onClick = {()=>handlePlay(currentPlayingSong)} src = {play_button} width={40} height={40}/> } 
+         {currentPlayingSong.playing ? <img onClick = {()=>handlePause(currentPlayingSong)} src = {pauseButton} width={37} height={37}/>: <img onClick = {()=>handlePlay(currentPlayingSong)} src = {play_button} width={40} height={40}/> } 
           <img width="20" height="20" onClick = {()=>handleNext(currentPlayingSong)} src={nextButton} style={{ cursor: "pointer" }} />
         </div>
 

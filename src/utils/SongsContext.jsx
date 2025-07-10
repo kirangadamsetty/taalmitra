@@ -5,7 +5,7 @@ import { hindiTopSongs } from "./hindiSongsData"
 export const SongsContext = createContext()
 
 export const SongsContextProvider = ({children})=>{
-
+const [singlePageData, setSinglePageData] = useState([])
 const allSongs = [...teluguTopSongs, ...hindiTopSongs]
 const [selectedPlayList, setSelectedPlayList] = useState([])
 const [songsList, setSongsList]  = useState([])
@@ -69,7 +69,6 @@ const handlePrevious  = (data) =>{
     play()
   }
 }
-console.log(audioRef.current)
 const  handleUpdatedPauseButton = (data) =>{
 
     setCurrentPlayingSong({...data, playing:false})
@@ -77,8 +76,10 @@ const  handleUpdatedPauseButton = (data) =>{
     setFilteredData(updatedData)
 }
 
+
+
     return(
-      <SongsContext.Provider value = {{handleNext, handlePrevious,handleUpdatedPauseButton,selectedPlayList,filteredData, setSelectedPlayList, handleFilteredData, handleUpdatedPlayButton,currentPlayingSong, setCurrentPlayingSong, audioRef, play, pause , songsList}}>
+      <SongsContext.Provider value = {{singlePageData, setSinglePageData,handleNext, handlePrevious,handleUpdatedPauseButton,selectedPlayList,filteredData, setSelectedPlayList, handleFilteredData, handleUpdatedPlayButton,currentPlayingSong, setCurrentPlayingSong, audioRef, play, pause , songsList}}>
         {children}
       </SongsContext.Provider>
     )

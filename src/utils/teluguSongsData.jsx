@@ -48,7 +48,7 @@ export const teluguTopSongs = [
     id: "teluguTop-3",
     category: "teluguTop",
     language: "Telugu",
-    song_name: "Bongarala Juttu Tippi",
+    song_name: "Ungarala Juttu Tippi",
     movie_name: "MCA (Middle Class Abbayi)",
     artist_name: "Nani, Sai Pallavi",
     music_director: "Devi Sri Prasad",

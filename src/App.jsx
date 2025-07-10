@@ -5,6 +5,7 @@ import Sidebar from "./components/Sidebar.jsx"
 import Home from "./pages/Home.jsx";
 import SongPlayer from "./components/SongsPlayer.jsx"
 import SongsListPage from "./pages/SongsListPage.jsx"
+import SingleSongPage from "./pages/SingleSongPage.jsx"
 import {useContext} from "react"
 import { SongsContextProvider, SongsContext } from "./utils/SongsContext.jsx";
 import AudioContextProvider from "./utils/AudioContext"
@@ -16,10 +17,11 @@ function AppLayout() {
 
       <Header />    
    <div className = "d-flex overflow-hidden">
-    <div>
+    {/* <div>
 <Sidebar/>
-    </div>
-    <div className="flex-grow-1" style={{marginTop:"80px", marginLeft: "20%", marginBottom: currentPlayingSong? "75px" : "0px"  }}>
+    </div> */}
+    <div className="flex-grow-1" style={{marginTop:"65px", marginBottom: currentPlayingSong? "75px" : "0px"  }}>
+    ]
           <Outlet />
         </div>
    </div>
@@ -54,6 +56,9 @@ export const appRouter = createBrowserRouter([
         },{
           path  : "/songsInfo",
           element : <SongsListPage/>
+        },{
+          path :"/singleSong",
+          element : <SingleSongPage/>
         }
     ]
   },

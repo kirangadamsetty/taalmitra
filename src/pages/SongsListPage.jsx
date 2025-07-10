@@ -2,12 +2,13 @@ import "../styles/songsInfoPage.css"
 import whiteHeart from "../assets/heart_white.png"
 import play_button from "../assets/play_button.png"
 import {useContext} from "react"
+import Container from "react-bootstrap/esm/Container"
 import { SongsContext } from "../utils/SongsContext"
 import pauseButton from "../assets/pause-button.png"
-
+import {useNavigate} from "react-router-dom"
 function SongsListPage(){
-    const {filteredData, audioRef,pause, play,handleUpdatedPauseButton,selectedPlayList,handleUpdatedPlayButton}  = useContext(SongsContext)
- 
+    const {setSinglePageData, filteredData, audioRef,pause, play,handleUpdatedPauseButton,selectedPlayList,handleUpdatedPlayButton}  = useContext(SongsContext)
+  const navigate = useNavigate()
    const handlePlay = (data) =>{
 
     audioRef.current.src = data.src
@@ -24,7 +25,7 @@ function SongsListPage(){
     return(
         <div className = "songsInfo-background songsInfoPage" style = {{minHeight:"100dvh" }}>
 
-      
+      <Container>
       <div className = "d-flex gap-4 p-4">
      <img src = {selectedPlayList.image} width = "200" height = "200"/>
      <div className = "align-self-end">
@@ -43,21 +44,25 @@ function SongsListPage(){
  <div className = "d-flex align-items-center gap-4">
      
            {data.playing ? <img onClick = {()=>handlePause(data)} src = {pauseButton}  width= "30" height = "30" /> : <img onClick ={()=>handlePlay(data)} src = {play_button}  width= "30" height = "30" /> } 
-             <div style ={{minWidth:"300px", maxWidth:"300px"}}>
- <p className  = "song-list-title">{data.song_name}</p>
+             <div style ={{minWidth:"300px", maxWidth:"300px"}} onClick = {()=>{setSinglePageData(data)}}>
+ <p className  = "song-list-title" >{data.song_name}</p>
              <p className = "detail-info">{data.movie_name} - {data.music_director}</p>
              </div>
-             <img  src = {whiteHeart} width= "30" height = "30"/>
+            
            
 
             </div>
-          <h6 className  = "songs-detail-info">10:30</h6>
+            <div>
+<img  src = {whiteHeart} width= "30" height = "30"/>
+        
+            </div>
+          
             </div>
            
           )
       })}
       </div>
-
+</Container>
 
         </div>
     )
