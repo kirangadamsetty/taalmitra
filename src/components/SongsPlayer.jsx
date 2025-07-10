@@ -73,13 +73,16 @@ function SongPlayer() {
         </div>
 
         {/* Center Section: Controls - Center Aligned Absolutely */}
-        <div style={{
+        <div
+        
+         style={{
           position: "absolute",
           left: "50%",
           transform: "translateX(-50%)",
           display: "flex",
           alignItems: "center",
           gap: "18px"
+         
         }}>
           <img width="20" height="20" onClick = {()=>handlePrevious(currentPlayingSong)} src={previousButton} style={{ cursor: "pointer" }} />
          {currentPlayingSong.playing ? <img onClick = {()=>handlePause(currentPlayingSong)} src = {pauseButton} width={37} height={37}/>: <img onClick = {()=>handlePlay(currentPlayingSong)} src = {play_button} width={40} height={40}/> } 
@@ -87,6 +90,7 @@ function SongPlayer() {
         </div>
 
         {/* Right Section: Time & Volume */}
+      
         <div className="d-flex gap-3 align-items-center justify-content-end" style={{ minWidth: "220px" }}>
           <p className="detail-info mb-0" style={{ borderRadius: "8px", color: "white", border: "1px solid white", padding: "4px 8px" }}>
             <span>{formatTime(currentTime)}</span><span> / </span><span>{formatTime(duration)}</span>
@@ -104,8 +108,8 @@ function SongPlayer() {
     audioRef.current.volume = newVolume;
   }}
 />
-
-          </div>
+</div>
+          
         </div>
       </div>
     </div>
